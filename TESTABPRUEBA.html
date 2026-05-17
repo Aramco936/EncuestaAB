@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encuesta</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    width:85%;
+    max-width:400px;
+    text-align:center;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1{
+    margin-bottom:15px;
+}
+
+p{
+    color:#444;
+    margin-bottom:25px;
+    line-height:1.5;
+}
+
+button{
+    background:#000;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    width:100%;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <h1>Encuesta de investigación</h1>
+
+    <p>
+        Presiona el botón para comenzar la encuesta.
+    </p>
+
+    <button onclick="irEncuesta()">
+        Comenzar encuesta
+    </button>
+
+</div>
+
+<script>
+
+function irEncuesta(){
+
+    const formularioA = "https://youtu.be/ceua-0ikNAg?si=F5rlHUWC_t2EwQGG";
+    const formularioB = "https://youtu.be/SagIuvaJKio?si=3klTP8AIjL0EgFfT";
+
+    const destino =
+        Math.random() < 0.5
+        ? formularioA
+        : formularioB;
+
+    window.location.href = destino;
+}
+
+</script>
+
+</body>
+</html>
